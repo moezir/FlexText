@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Flex Text</title>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="flextext.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: lightcyan;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        h4 {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .demo-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: aquamarine;
+            width: 50%;
+            height: 30%;
+            box-shadow: 0 0 3px black;
+            padding: 10px;
+        }
+
+        .flex-text {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h2><a href="https://github.com/moezir/FlexText">Flex Text</a></h2>
+    <h4>
+        Resize the browser window to change font size.
+    </h4>
+    <div class="demo-container">
+        <div class="flex-text">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+    </div>
+
+
+
+    <script>
+        $(document).ready(function () {
+            $(".flex-text").flextext({
+                minFont: 6,
+                maxFont: 40,
+                oneLine: false,
+                onResize: true
+            });
+        });
+    </script>
+</body>
+</html>
