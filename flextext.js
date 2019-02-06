@@ -16,7 +16,9 @@
             minFont: 4,
             maxFont: 32,
             oneLine: false,
-            onResize: true
+            onResize: true,
+            paddingV: "0px",
+            paddingH: "0px"
         }, options);
 
         $this = this;
@@ -39,7 +41,7 @@
         function ft_Flex(el) {
             return $(el).each(function () {
                 $(this).css(_overflow, _hidden);
-                $(this).css(_padding, '0');
+                $(this).css(_padding, _settings.paddingV +' ' + _settings.paddingH);
                 if (_settings.oneLine)
                     $(this).css(_whiteSpace, _nowrap);
                 for (var i = _settings.maxFont; i >= _settings.minFont; i--) {
