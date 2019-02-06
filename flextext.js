@@ -53,7 +53,7 @@
                 $(this).css(_margin, _settings.marginV + ' ' + _settings.marginH);
                 $(this).css(_fontWeight, _settings.fontWeight);
                 $(this).css(_lineHeight, _settings.lineHeight);
-                if (_settings.height != null && _settings.height.lenght > 0)
+                if (_settings.height != null && _settings.height.length > 0)
                     $(this).css(_height, _settings.height);
                 if (_settings.oneLine)
                     $(this).css(_whiteSpace, _nowrap);
