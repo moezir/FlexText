@@ -28,6 +28,7 @@
         var _fontSize = 'font-size';
         var _whiteSpace = 'white-space';
         var _padding = 'padding';
+        var _margin = 'margin';
         var _overflow = 'overflow';
         var _hidden = 'hidden';
         var _nowrap = 'nowrap';
@@ -44,7 +45,7 @@
             return $(el).each(function () {
                 $(this).css(_overflow, _hidden);
                 $(this).css(_padding, '0'); 
-                $(this).css(_padding, _settings.marginV + ' ' + _settings.marginH);            
+                $(this).css(_margin, _settings.marginV + ' ' + _settings.marginH);            
                 $(this).css(_fontWeight, _settings.fontWeight);
                 
                 if (_settings.oneLine)
