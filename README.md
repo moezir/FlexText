@@ -11,7 +11,7 @@ Fit text inside block.
             minFont: 4,         
             maxFont: 32,
             oneLine: false, --fit text in one line
-            onResize: true,  --resize text on window.resize event
-            paddingV: "0px",
-            paddingH: "0px",
+            onResize: true,  --resize text on window.resize event            
+            marginV: "0px",
+            marginH: "0px",
             fontWeight: "normal"
