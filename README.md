@@ -14,4 +14,5 @@ Fit text inside block.
             onResize: true,  --resize text on window.resize event            
             marginV: "0px",
             marginH: "0px",
-            fontWeight: "normal"
+            fontWeight: "normal",
+            onSuccess: function () { }
