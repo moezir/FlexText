@@ -33,7 +33,7 @@
         var _overflow = 'overflow';
         var _hidden = 'hidden';
         var _nowrap = 'nowrap';
-        var _fontWeight = 'normal'
+        var _fontWeight = 'font-weight';
 
         if (_settings.onResize)
             ft_OnResize();
