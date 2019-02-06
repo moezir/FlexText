@@ -19,7 +19,8 @@
             onResize: true,
             marginV: "0px",
             marginH: "0px",
-            fontWeight: "normal"
+            fontWeight: "normal",
+            callBack: function() {}
         }, options);
 
         $this = this;
@@ -55,6 +56,7 @@
                     if ((Math.ceil($(this).prop(_scrollWidth)) <= Math.ceil($(this).width()) && Math.ceil($(this).prop(_scrollHeight)) <= Math.ceil($(this).height())) || i == _settings.minFont) {
                         break;
                     }
+                    _settings.callBack.call(this);
                 }
             });
         }
