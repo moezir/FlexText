@@ -17,8 +17,8 @@
             maxFont: 32,
             oneLine: false,
             onResize: true,
-            paddingV: "0px",
-            paddingH: "0px",
+            marginV: "0px",
+            marginH: "0px",
             fontWeight: "normal"
         }, options);
 
@@ -43,7 +43,8 @@
         function ft_Flex(el) {
             return $(el).each(function () {
                 $(this).css(_overflow, _hidden);
-                $(this).css(_padding, _settings.paddingV +' ' + _settings.paddingH);                
+                $(this).css(_padding, '0'); 
+                $(this).css(_padding, _settings.marginV + ' ' + _settings.marginH);            
                 $(this).css(_fontWeight, _settings.fontWeight);
                 
                 if (_settings.oneLine)
