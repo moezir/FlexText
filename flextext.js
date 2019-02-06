@@ -17,6 +17,8 @@
             maxFont: 32,
             oneLine: false,
             onResize: true,
+            height: "",
+            lineHeight: "1em",
             marginV: "0px",
             marginH: "0px",
             fontWeight: "normal",
@@ -34,6 +36,8 @@
         var _hidden = 'hidden';
         var _nowrap = 'nowrap';
         var _fontWeight = 'font-weight';
+        var _height = 'height';
+        var _lineHeight = 'line-height';
 
         if (_settings.onResize)
             ft_OnResize();
@@ -48,9 +52,13 @@
                 $(this).css(_padding, '0');
                 $(this).css(_margin, _settings.marginV + ' ' + _settings.marginH);
                 $(this).css(_fontWeight, _settings.fontWeight);
-                var isSuccess = false;
+                $(this).css(_lineHeight, _settings.lineHeight);
+                if (_settings.height != null && _settings.height.lenght > 0)
+                    $(this).css(_height, _settings.height);
                 if (_settings.oneLine)
                     $(this).css(_whiteSpace, _nowrap);
+
+                var isSuccess = false;
                 for (var i = _settings.maxFont; i >= _settings.minFont; i--) {
                     $(this).css(_fontSize, i + "px");
                     if ((Math.ceil($(this).prop(_scrollWidth)) <= Math.ceil($(this).width()) && Math.ceil($(this).prop(_scrollHeight)) <= Math.ceil($(this).height())) || i == _settings.minFont) {
