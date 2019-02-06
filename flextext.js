@@ -18,7 +18,8 @@
             oneLine: false,
             onResize: true,
             paddingV: "0px",
-            paddingH: "0px"
+            paddingH: "0px",
+            fontWeight: "normal"
         }, options);
 
         $this = this;
@@ -30,6 +31,7 @@
         var _overflow = 'overflow';
         var _hidden = 'hidden';
         var _nowrap = 'nowrap';
+        var _fontWeight = 'normal'
 
         if (_settings.onResize)
             ft_OnResize();
@@ -41,7 +43,9 @@
         function ft_Flex(el) {
             return $(el).each(function () {
                 $(this).css(_overflow, _hidden);
-                $(this).css(_padding, _settings.paddingV +' ' + _settings.paddingH);
+                $(this).css(_padding, _settings.paddingV +' ' + _settings.paddingH);                
+                $(this).css(_fontWeight, _settings.fontWeight);
+                
                 if (_settings.oneLine)
                     $(this).css(_whiteSpace, _nowrap);
                 for (var i = _settings.maxFont; i >= _settings.minFont; i--) {
